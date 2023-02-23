@@ -12,7 +12,9 @@ html {
     padding: 20px 20px;
     font-family: "Roboto", sans-serif;
     line-height: 1.5;
-    background: hsl(0, 2%, 88%);
+    background-image: url("/images/pexels-tara-winstead-6690929.jpg");
+    background-position: center center;
+    background-size: cover;
 }
 
 .title {
