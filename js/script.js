@@ -1,23 +1,35 @@
 console.log("Witaj szanowny developerze 😎");
 
-let formElement = document.querySelector(".js-form");
-console.log(formElement);
-let currencyElement = document.querySelector(".js-baseCurrency");
-let converterElement = document.querySelector(".js-conversionFactor");
-let newCurrencyElement = document.querySelector(".js-newCurrency");
-console.log(newCurrencyElement);
+const formElement = document.querySelector(".js-form");
+const amountElement = document.querySelector(".js-baseCurrency");
+const currencyElement = document.querySelector(".js-currency");
+const valueElement = document.querySelector(".js-newValue");
 
+const calculateResult = (amount, currency) => {
+  const rateEUR = 4.4278;
+  const rateGBP = 4.9384;
+  const rateUSD = 3.9058;
+  switch (currency) {
+    case "EUR":
+      return amount / rateEUR;
 
+    case "GBP":
+      return amount / rateGBP;
+
+    case "USD":
+      return amount / rateUSD;
+  }
+};
 
 formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    let currency = currencyElement.value;
-    let converter = converterElement.value;
-    let newCurrency = newCurrencyElement.value;
+  const amount = +amountElement.value;
+  const currency = currencyElement.value;
 
-    newCurrency = currency * converter;
+  let result = calculateResult(amount, currency);
 
-    newCurrencyElement.innerText = newCurrency.toFixed(2);
+  valueElement.innerHTML = `${amount.toFixed(2)} PLN = <strong>${result.toFixed(
+    2
+  )} ${currency}</strong>`;
 });
-

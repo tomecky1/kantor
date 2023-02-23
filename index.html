@@ -29,16 +29,19 @@
                     do wypełnienia</legend>
                 <p>
                     <label>
-                        <span class="form__labelText">* Waluta podstawowa:</span>
+                        <span class="form__labelText">* Waluta w PLN:</span>
                         <input class="form__field js-baseCurrency" type="number" min="0" step="any" required
-                            placeholder="podaj kwotę w PLN">
+                            placeholder="podaj dowolną kwotę w PLN">
                     </label>
                 </p>
                 <p>
                     <label>
-                        <span class="form__labelText">* Przelicznik:</span>
-                        <input class="form__field js-conversionFactor" type="number" min="0" step="any"
-                            placeholder="podaj aktualny kurs" required>
+                        <span class="form__labelText">* WALUTA:</span>
+                        <select class="form__field js-currency" name="currencySelector">
+                            <option value="EUR" selected>Euro</option>
+                            <option value="GBP">Funt brytyjski</option>
+                            <option value="USD">Dolar amerykański</option>
+                        </select>
                     </label>
                 </p>
             </fieldset>
@@ -47,9 +50,9 @@
                 <button class="form__button" type="reset">RESETUJ</button>
             </div>
         </form>
-        <p>
-            Nowa wartość waluty wynosi: <strong class="newCurrency js-newCurrency">B/D</strong>
-        </p>
+        <div class="newValue js-newValue">
+            Wartość waluty wynosi: <strong class="newCurrency js-newCurrency">B/D</strong>
+        </div>
     </main>
 
 </body>

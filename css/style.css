@@ -24,3 +24,12 @@ html {
 .newCurrency {
     color: crimson;
 }
+
+.newValue {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #ccc;
+    text-align: center;
+    text-decoration: underline wavy;
+    border-radius: 5px;
+}
