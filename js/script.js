@@ -5,9 +5,9 @@
   const valueElement = document.querySelector(".js-newValue");
 
   const calculateResult = (amount, currency) => {
-    const rateEUR = 4.4278;
-    const rateGBP = 4.9384;
-    const rateUSD = 3.9058;
+    const rateEUR = 4.6580;
+    const rateGBP = 5.5010;
+    const rateUSD = 3.8580;
     switch (currency) {
       case "EUR":
         return amount / rateEUR;
