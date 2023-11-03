@@ -22,7 +22,7 @@
 </head>
 
 <body class="body">
-    <h1 class="title">KANTOR - kalkulator walut</h1>
+    <h1 class="title">KANTOR - przelicznik walut na aktualny dzień wg kursów NBP</h1>
     <main class="main">
         <div class="container">
         <table class="table" align="center">
@@ -30,7 +30,7 @@
                 <tr>
                     <th>Nazwa waluty</th>
                     <th>Kod waluty</th>
-                    <th>Kurs średni</th>
+                    <th>Kurs średni NBP</th>
                 </tr>
             </thead>
             <tbody class="js-table-body">
@@ -38,7 +38,6 @@
         </table>
         <script>
             const tableBody = document.querySelector('.js-table-body');
-
             fetch('https://api.nbp.pl/api/exchangerates/tables/A')
                 .then(response => response.json())
                 .then(data => {
