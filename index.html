@@ -25,32 +25,41 @@
     <h1 class="title">KANTOR - kalkulator walut</h1>
     <main class="main">
         <div class="container">
-            <table class="table" align="center">
-                <tr class="table__row">
-                    <th class="table__header">Waluta</th>
-                    <th class="table__header">Kurs średni</th>
-                    <th class="table__header">Kurs kupna</th>
-                    <th class="table__header">Kurs sprzedaży</th>
+        <table class="table" align="center">
+            <thead>
+                <tr>
+                    <th>Nazwa waluty</th>
+                    <th>Kod waluty</th>
+                    <th>Kurs średni</th>
                 </tr>
-                <tr class="table__row">
-                    <td class="table__data">euro</td>
-                    <td class="table__data">4,5580</td>
-                    <td class="table__data">4,4580</td>
-                    <td class="table__data">4,6580</td>
-                </tr>
-                <tr class="table__row">
-                    <td class="table__data">funt brytyjski</td>
-                    <td class="table__data">5,3010</td>
-                    <td class="table__data">5,2010</td>
-                    <td class="table__data">5,5010</td>
-                </tr>
-                <tr class="table__row">
-                    <td class="table__data">dolar amerykański</td>
-                    <td class="table__data">3,7580</td>
-                    <td class="table__data">3,6580</td>
-                    <td class="table__data">3,8580</td>
-                </tr>
-            </table>
+            </thead>
+            <tbody class="js-table-body">
+            </tbody>
+        </table>
+        <script>
+            const tableBody = document.querySelector('.js-table-body');
+
+            fetch('https://api.nbp.pl/api/exchangerates/tables/A')
+                .then(response => response.json())
+                .then(data => {
+                    data[0].rates.forEach(rate => {
+                        const row = document.createElement('tr');
+                        const nameCell = document.createElement('td');
+                        const codeCell = document.createElement('td');
+                        const midCell = document.createElement('td');
+
+                        nameCell.textContent = rate.currency;
+                        codeCell.textContent = rate.code;
+                        midCell.textContent = rate.mid;
+
+                        row.appendChild(nameCell);
+                        row.appendChild(codeCell);
+                        row.appendChild(midCell);
+
+                        tableBody.appendChild(row);
+                    });
+                });
+        </script>
         </div>
         <form class="form js-form">
             <fieldset class="form__fieldset">
