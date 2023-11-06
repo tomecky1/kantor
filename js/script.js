@@ -1,26 +1,25 @@
 {
   console.log("Witaj szanowny developerze 😎");
 
-  
   // const resultElement = document.querySelector(".js-newValue");
 
   const calculateResult = (amount, currency) => {
-    const rateEUR = 4.6580;
+    const rateEUR = 4.658;
     const rateGBP = 5.1123;
-    const rateUSD = 3.8580;
-    
+    const rateUSD = 3.858;
+
     switch (currency) {
       case "EUR":
         return amount / rateEUR;
-        
+
       case "GBP":
-        return amount / rateGBP;    
+        return amount / rateGBP;
 
       case "USD":
         return amount / rateUSD;
     }
   };
-  
+
   const init = () => {
     const formElement = document.querySelector(".js-form");
     formElement.addEventListener("submit", (event) => {
@@ -34,8 +33,10 @@
 
       const result = calculateResult(amount, currency);
 
-    resultElement.innerHTML = `${amount} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
-  });
-};
+      resultElement.innerHTML = `${amount} PLN = <strong>${result.toFixed(
+        2
+      )} ${currency}</strong>`;
+    });
+  };
   init();
 }
