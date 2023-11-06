@@ -2,7 +2,7 @@
   console.log("Witaj szanowny developerze 😎");
 
   
-  const valueElement = document.querySelector(".js-newValue");
+  // const resultElement = document.querySelector(".js-newValue");
 
   const calculateResult = (amount, currency) => {
     const rateEUR = 4.6580;
@@ -20,6 +20,7 @@
         return amount / rateUSD;
     }
   };
+  
   const init = () => {
     const formElement = document.querySelector(".js-form");
     formElement.addEventListener("submit", (event) => {
