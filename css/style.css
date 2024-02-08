@@ -12,7 +12,8 @@ html {
     padding: 20px 20px;
     font-family: "Roboto", sans-serif;
     line-height: 1.5;
-    background-image: url("../images/pexels-pixabay-53594.jpg");
+    background-color: burlywood;
+    background-image: url("/images/pexels-skitterphoto-12619.jpg");
     background-position: center center;
     background-size: cover;
 }
