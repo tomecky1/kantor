@@ -1,38 +1,37 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-*, *::after, *::before {
-    box-sizing: inherit;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
 .body {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 20px;
-    font-family: "Roboto", sans-serif;
-    line-height: 1.5;
-    background-color: burlywood;
-    background-image: url("/images/pexels-skitterphoto-12619.jpg");
-    background-position: center center;
-    background-size: cover;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  background-color: burlywood;
 }
 
 .title {
-    text-shadow: 1px 2px 5px yellow;
-    text-align: center;
+  text-shadow: 1px 2px 5px yellow;
+  text-align: center;
 }
 
 .newCurrency {
-    color: crimson;
+  color: crimson;
 }
 
 .newValue {
-    margin-top: 30px;
-    padding: 10px;
-    background-color: #ccc;
-    text-align: center;
-    text-decoration: underline;
-    border-radius: 5px;
-    box-shadow: 2px 5px 14px;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #ccc;
+  text-align: center;
+  text-decoration: underline;
+  border-radius: 5px;
+  box-shadow: 2px 5px 14px;
 }
