@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -26,10 +26,10 @@
   </head>
 
   <body class="body">
-    <h1 class="title">KANTOR - przelicznik walut na dzień wg kursów NBP:</h1>
+    <!-- <h1 class="title">KANTOR</h1> -->
     <main class="main">
       <div class="container">
-        <table class="table" align="center">
+        <!-- <table class="table" align="center">
           <thead class="table__header">
             <tr>
               <th>Nazwa waluty</th>
@@ -41,7 +41,7 @@
         </table>
         <script>
           const tableBody = document.querySelector(".js-table-body");
-          fetch("https://api.nbp.pl/api/exchangerates/tables/A")
+          fetch("https://api.nbp.pl/api/exchangerates/tables/C?format=json")
             .then((response) => response.json())
             .then((data) => {
               data[0].rates.forEach((rate) => {
@@ -61,7 +61,7 @@
                 tableBody.appendChild(row);
               });
             });
-        </script>
+        </script> -->
       </div>
       <form class="form js-form">
         <fieldset class="form__fieldset">
@@ -71,7 +71,7 @@
           </legend>
           <p>
             <label>
-              <span class="form__labelText">* Waluta w PLN:</span>
+              <span class="form__labelText">Kwota w zł*:</span>
               <input
                 class="form__field js-baseCurrency"
                 type="number"
@@ -84,7 +84,7 @@
           </p>
           <p>
             <label>
-              <span class="form__labelText">* WALUTA:</span>
+              <span class="form__labelText">Waluta:</span>
               <select class="form__field js-currency" name="currencySelector">
                 <option value="EUR" selected>Euro</option>
                 <option value="GBP">Funt brytyjski</option>

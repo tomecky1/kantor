@@ -8,18 +8,18 @@ html {
   box-sizing: inherit;
 }
 
-.body {
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
   line-height: 1.5;
-  background-color: burlywood;
-}
-
-.title {
-  text-shadow: 1px 2px 5px yellow;
-  text-align: center;
+  background-image: url("../images/coins-1726618_1920.jpg");
+  background-size: cover;
 }
 
 .newCurrency {
@@ -31,7 +31,7 @@ html {
   padding: 10px;
   background-color: #ccc;
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
   border-radius: 5px;
-  box-shadow: 2px 5px 14px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
